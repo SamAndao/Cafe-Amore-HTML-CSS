@@ -323,3 +323,105 @@ main {
 .description__card-image2 {
     object-position:top;
 }
+
+
+.best-sellers {
+    height: 800px;
+    padding-top: 100px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    background-color: rgba(243, 217, 150, 0.842);
+}
+
+.best-sellers__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.best-sellers__heading {
+    font-size: 40px;
+    color: rgb(37, 37, 37);
+}
+
+.best-sellers__cards {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-sellers__card {
+    width:31%;
+    height: 500px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px rgba(32, 32, 32, 0.349);
+    overflow: hidden;
+}
+
+.best-seller__card-image {
+    height: 40%;
+    background-color: lightblue;
+    position:relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.best-seller__card-inclusions {
+    margin-top: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.best-seller__card-text {
+    text-align: center;
+    padding: 10px 0px;
+    width: 80%;
+    font-size: 16px;
+}
+
+.best-seller__card-text:not(:last-child) {
+    border-bottom: 1px solid rgba(87, 87, 87, 0.356);
+}
+
+.best-seller__card-image3 {
+    background-image: url("images/Untitled\ Project.jpg");
+    
+}
+
+.best-seller__card-image2 {
+    background-image: url("images/Magic\ Studio\ Magic\ Expand\ L&P\ -\ MOBILE.png");
+    
+}
+
+.best-seller__card-image1 {
+    background-image: url("images/Magic\ Studio\ Magic\ Expand\ L&P\ -\ MOBILE\ \(1\).jpg");
+    background-position: right;
+}
+
+.best-seller__card-heading {
+    color: white;
+    position: absolute;    
+    width: 40%;
+    line-height: 2.1;
+    right: 5%;
+    text-align: right;
+    bottom: -16%;
+
+}
+.best-seller__card-span {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-wrap: wrap;
+    padding: 10px;
+    margin-top: 15px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(51, 51, 51, 0.726)), to(rgb(0, 0, 0)));
+}
