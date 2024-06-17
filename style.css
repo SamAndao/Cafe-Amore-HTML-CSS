@@ -425,3 +425,70 @@ main {
     margin-top: 15px;
     background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(51, 51, 51, 0.726)), to(rgb(0, 0, 0)));
 }
+
+
+.comments {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background-image: url("images/Magic\ Studio\ Magic\ Expand\ L&P\ -\ MOBILE\ \(2\).jpg");
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.856);
+    background-blend-mode: screen;
+}
+
+.comments__container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comments__heading {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 80px;
+}
+
+.comments__card {
+    background-color: white;
+    height: 250px;
+    width: 800px;
+    padding: 40px;
+    transform: skew(-12deg);
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+
+}
+
+.comments__card > * {
+    transform: skew(12deg);
+}
+
+.comments__text-portion {
+    width: 70%;
+}
+
+.comments__img {
+    height: 150px;
+    width:150px;
+    border-radius: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.comments__story-title {
+    font-size: 18px;
+    color:rgba(100, 100, 100, 0.822);
+    margin-bottom: 10px;
+}
+.comments__story-text {
+    font-size: 16px;
+    color:rgba(37, 37, 37, 0.616);
+    line-height: 1.7;
+}
