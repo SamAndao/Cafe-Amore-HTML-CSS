@@ -198,6 +198,7 @@ main {
     animation-delay: 1s;
     animation-fill-mode:both;
     border-radius: 5px;
+    font-size: 24px;
 }
 
 
