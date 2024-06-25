@@ -70,8 +70,13 @@ main {
 
 .btn:hover {
     background-color: rgb(241, 201, 99);
+    transform: translatey(-3px) scale(102%);
+    
 }
-
+.btn:active {
+    background-color: rgb(223, 185, 90);
+    transform:  scale(102%);
+}
 
 .mb-20 {
     margin-bottom: 20px;
@@ -175,7 +180,24 @@ main {
     width: 600px;
     font-size: 60px;
     color: rgb(219, 238, 255);
+    visibility:hidden;
+
     margin-bottom: 20px;
+    animation-name: slideInLeft;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
+    animation-fill-mode:forwards;
+}
+
+.home__hero-btn {
+    visibility: hidden;
+    animation-name: slideInBottom;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode:both;
+    border-radius: 5px;
 }
 
 
@@ -232,6 +254,11 @@ main {
     position: relative;
     height: 100%;
 }
+
+.about__content__images:hover .about__content__image:not(:hover){
+    transform: translate(-50%, -50%) scale(85%) ;
+} 
+
 .about__content__image {
     aspect-ratio: 16/9;
     max-width: 60%;
@@ -240,6 +267,7 @@ main {
     object-fit: cover;
     object-position: bottom;
     box-shadow: 4px 10px 30px black;
+    transition: all .3s ease-out;
 }
 
 .about__image1 {
@@ -253,6 +281,11 @@ main {
 .about__image3 {
     top: 40%;
     left:70%;
+}
+
+.about__content__image:hover {
+    transform: translate(-50%, -50%) scale(110%) ;
+    z-index: 100000;
 }
 
 .about__btn {
@@ -362,7 +395,14 @@ main {
     border-radius: 5px;
     box-shadow: 1px 5px 20px rgba(32, 32, 32, 0.349);
     overflow: hidden;
+    transition: all .3s ease-out;
 }
+
+.best-sellers__card:hover {
+    transform: translatey(-3px) scale(104%);
+
+}
+
 
 .best-seller__card-image {
     height: 40%;
@@ -462,6 +502,7 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 80px;
+    box-shadow: 3px 4px 10px rgba(66, 66, 66, 0.411);
 
 }
 
@@ -473,13 +514,46 @@ main {
     width: 70%;
 }
 
+.comments__card-name {
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:50%;
+    text-align: center;
+    text-transform: none;
+    color: rgb(20, 20, 20);
+}
+
+.comments__card:hover .comments__img{
+    transform: scale(115%);
+    filter: blur(4px);
+}
+
+.comments__card:hover .comments__card-name{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
 .comments__img {
+    height: 150px;
+    width:150px;
+    object-fit: cover;
+    object-position: left;
+    transition: all .5s ease-out;
+}
+
+.comments__img-cont {
     height: 150px;
     width:150px;
     border-radius: 100px;
     margin-right: 20px;
-    object-fit: cover;
-    object-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position:relative;
 }
 
 .comments__story-title {
@@ -556,6 +630,26 @@ main {
     font-size: 40px;
     margin-top: 10px;
 }
-.contact__title {
 
+
+@keyframes slideInLeft {
+    from {
+        transform: translatex(-100px);
+        visibility: hidden;
+    }
+    to {
+        transform: translatex(0);
+        visibility:visible;
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translatey(50px);
+        visibility: hidden;
+    }
+    to {
+        transform: translatex(0);
+        visibility:visible;
+    }
 }
