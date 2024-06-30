@@ -1,12 +1,17 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     background-color: rgb(233, 233, 227);
     overflow-x: hidden;
+    box-sizing: border-box;
 
 }
 
@@ -17,6 +22,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 
@@ -93,7 +99,7 @@ main {
 
 .header {
     height: 80px;
-    width: 100vw;
+    max-width: 100vw;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -210,7 +216,6 @@ main {
 .about {
     display:flex;
     justify-content: center;
-    min-height: 700px;
     margin-top: 20px;
 }
 
@@ -242,6 +247,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    padding: 0 20px;
 }
 
 .about__content__text {
@@ -303,14 +309,13 @@ main {
     background-position: bottom;
     background-size: cover;
     width: 100vw;
-    height: 800px;
+    min-height: 800px;
     background-blend-mode: color-burn;
     background-color: rgba(0, 0, 0, 0.623);
 }
 
 .description__container {
-    max-width: 1300px;
-    height: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -386,7 +391,6 @@ main {
 
 
 .best-sellers {
-    height: 800px;
     padding-top: 100px;
     width: 100%;
     display:flex;
@@ -402,6 +406,8 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0 40px;
+    margin-bottom: 100px;
 }
 
 .best-sellers__heading {
@@ -460,7 +466,7 @@ main {
     text-align: center;
     padding: 10px 0px;
     width: 80%;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .best-seller__card-text:not(:last-child) {
@@ -618,6 +624,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px
 }
 
 .contact__container {
@@ -750,4 +757,121 @@ main {
     to {
         transform: scale(100%);
     }
+}
+
+
+@media (max-width: 1100px) {
+    
+    .about__content {
+        flex-direction: column-reverse;
+        margin-top: 10px;
+    }
+    .about__content__images {
+        height: 400px;
+        width: 80%;
+        margin: 30px 0;
+    }
+    .about__content__text {
+        padding: 0;
+        width: 90%;
+    }
+    .about__text {
+        text-align: justify;
+    }
+    
+    .description__container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .description__card {
+        width: 350px;
+        padding: 40px 20px;
+        min-height: 0;
+        margin-top: 60px;
+        margin-left:  10px;
+        margin-right: 10px; 
+    }
+    .best-sellers__cards {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        
+    }
+    .best-sellers__card {
+        width: 350px;
+        margin-top: 50px;
+    }
+    .comments__card {
+        width: 600px;
+    }
+    .comments__text-portion {
+        font-size: 14px;
+    }
+    .contact__form{ 
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .home__hero-text {
+        font-size: 48px;
+        width: 450px;
+    }
+    .about__content {
+        padding: 0;
+    }
+    .about__content__images {
+        margin: 0;
+    }
+    .description__head {
+        text-align: center;
+        font-size: 36px;
+    }
+    .comments__container{
+        flex-direction: column;
+    }
+    .comments__heading {
+        text-align: center;
+        font-size: 36;
+    }
+    .comments__card {
+        flex-direction: column;
+        background-color: white;
+        height: 400px;
+        width: 100%;
+        padding: 40px 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+        box-shadow: none;
+        transition: all 1s ease-out;
+        transform: none;
+        
+    }
+    .comments__text-portion {
+        padding: 0;
+        width: 100%;
+    }
+    .comments__story-title {
+        text-align: center;
+    }
+    .comments__story-text {
+        text-align: justify;
+    }
+    .comments__card > * {
+    transform: none;
+    }
+    .comments{
+        height: 100%;
+    }
+    .contact__form{ 
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    
 }
